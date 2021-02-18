@@ -128,7 +128,7 @@ while True:
                 if(vehiCy<lineCy+2 and vehiCy>lineCy-2):
 
                     count = count+1
-                    path = '/home/aj/Documents/project1/save_img'
+                    path = '/home/aj/Documents/ViolDetectwithANPR/save_img'
                     roi = frame[y:y+h, x:x+w]
                     cv2.imwrite(os.path.join(path,'vehicle_'+label+'_'+str(count)+'.jpg'),roi)
                     #cv2.line(frame,(0,height-200),(width,height-200),(0,0,255),2)
