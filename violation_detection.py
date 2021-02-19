@@ -132,6 +132,8 @@ while True:
                     roi = frame[y:y+h, x:x+w]
                     cv2.imwrite(os.path.join(path,'vehicle_'+label+'_'+str(count)+'.jpg'),roi)
                     #cv2.line(frame,(0,height-200),(width,height-200),(0,0,255),2)
+                    print("Violation Count: "+str(count))
+                    print("Vehicle Type: "+label)
                     
                     #ANPR BEGIN----------------------------------------------------------------------------
                     img = cv2.imread(os.path.join(path,'vehicle_'+label+'_'+str(count)+'.jpg'))
@@ -173,7 +175,7 @@ while True:
                             print("[INFO] {:.4f}: {}".format(prob, text))
                         
                     except:
-                        print("Unclear Vehicle!")
+                        print("Unclear Vehicle Number-Plate!")
                     #ANPR END------------------------------------------------------------------------------
 
                     #recoding video
