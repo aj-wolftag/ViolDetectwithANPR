@@ -169,8 +169,8 @@ while True:
                         reader = easyocr.Reader(['en'])
                         result = reader.readtext(cropped_image)
                         for (bbox, text, prob) in result:
-	                    # display the OCR'd text and associated probability
-	                    print("[INFO] {:.4f}: {}".format(prob, text))
+	                    # display the OCR'd text and associated probability 
+                            print("[INFO] {:.4f}: {}".format(prob, text))
                         
                     except:
                         print("Unclear Vehicle!")
